@@ -1,0 +1,45 @@
+.content {  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  padding:16px;
+  grid-auto-flow: row;
+  background-color:#c2bee036;
+  grid-template-areas:
+    "map contact"
+    "map contact";
+}
+
+.contact { grid-area: contact; }
+
+.map { grid-area: map; }
+
+.card-text{
+    font-size:x-small;
+    margin-bottom:0;}
+
+.row{
+    border: 1px solid #0b0b50ba;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 1404px) {
+
+.content {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  padding:16px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "map "
+    "contact contact";
+}
+
+.contact { grid-area: contact; }
+
+.map { grid-area: map; }
+
+}

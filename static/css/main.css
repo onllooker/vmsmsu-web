@@ -1,0 +1,33 @@
+/* Дополнительные стили для контентных окон */
+.content-window {
+  min-height: 300px; /* Добавим минимальную высоту для примера */
+}
+
+
+.nav-underline .nav-link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+.nav-underline .nav-link:hover {
+  border-bottom-color: #2e2e2e; /* цвет нижней границы при наведении (белый) */
+}
+
+
+.first-background-body{
+    background: -webkit-linear-gradient(45deg, rgb(232, 232, 232), rgb(193, 48, 106));
+    background: -moz-linear-gradient(45deg, rgb(232, 232, 232), rgb(193, 48, 106));
+    background: linear-gradient(45deg, rgb(232, 232, 232), rgb(193, 48, 106));
+}
+.second-background-body{
+    background: -webkit-linear-gradient(45deg, rgb(206, 206, 206), rgb(100, 119, 157), rgb(15, 46, 107) 85%);
+    background: -moz-linear-gradient(45deg, rgb(206, 206, 206), rgb(100, 119, 157), rgb(15, 46, 107) 85%);
+    background: linear-gradient(45deg, rgb(206, 206, 206), rgb(100, 119, 157), rgb(15, 46, 107) 85%);
+}
+.third-background-body{
+    background: -webkit-linear-gradient(45deg, rgb(201, 201, 201) 18%, rgb(178, 178, 178), rgb(97, 104, 114));
+    background: -moz-linear-gradient(45deg, rgb(201, 201, 201) 18%, rgb(178, 178, 178), rgb(97, 104, 114));
+    background: linear-gradient(45deg, rgb(201, 201, 201) 18%, rgb(178, 178, 178), rgb(97, 104, 114));
+}

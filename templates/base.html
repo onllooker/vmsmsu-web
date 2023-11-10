@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600&family=Montserrat:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/global.css')}}"/>
+    {%block style%}
+    {%endblock%}
+
+    <title>{%block title%}{%endblock%}</title>
+</head>
+<body>
+<div class="content-inner mb-5">
+<!--    <header class="header">-->
+<!--        <div style="background-color:#0B0B2C;display: flex;justify-content: space-between;">-->
+<!--            <button type="" class="header-up-btn adress" style="">ул. Академика Хохлова, 1с40, Москва, 119234</button>-->
+<!--            <button type="button" class="header-up-btn switch-lang" style="">RU</button>-->
+<!--        </div>-->
+<!--        <div class="container d-flex align-items-center justify-content-evenly">-->
+<!--            <div class="header-logo">-->
+<!--                <img src="../static/img/logo.png" width="173" alt=""/>-->
+<!--            </div>-->
+<!--            <div class="header-name container mx-0" style="padding-top: 20px">-->
+<!--                <a class="blog-header-logo text-body-emphasis text-decoration-none" href="main">-->
+<!--                    <h1 class="ml-2 title__main">-->
+<!--                        Кафедра высокомолекулярных соединений МГУ&nbsp;им.&nbsp;М.В.&nbsp;Ломоносова-->
+<!--                    </h1>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="container-fluid p-0 py-0 mb-4 main-navbar  border-top border-3">-->
+<!--            <nav class="nav-scroller main-navbar__nav container p-0 nav flex-nowrap">-->
+<!--                <a class="nav-item nav-link {% if active_page == 'hist' %}active{% endif %} flex-fill"-->
+<!--                   href="history">История кафедры</a>-->
+<!--                <a class="nav-item nav-link {% if active_page == 'lab' %}active{% endif %} flex-fill"-->
+<!--                   href="labs">Лаборатории</a>-->
+<!--                <a class="nav-item nav-link {% if active_page == 'employ' %}active{% endif %} flex-fill"-->
+<!--                   href="employees">Сотрудники</a>-->
+<!--                <a class="nav-item nav-link {% if active_page == 'stud' %}active{% endif %} flex-fill"-->
+<!--                   href="study">Учебные материалы</a>-->
+<!--                <a class="nav-item nav-link {% if active_page == 'articl' %}active{% endif %} flex-fill"-->
+<!--                   href="articles">Статьи</a>-->
+<!--                <a class="nav-item nav-link {% if active_page == 'conf' %}active{% endif %} flex-fill"-->
+<!--                   href="conf">Конференции</a>-->
+<!--                <a class="nav-item nav-link {% if active_page == 'contact' %}active{% endif %} flex-fill"-->
+<!--                   href="contacts">Контакты</a>-->
+<!--            </nav>-->
+<!--        </div>-->
+<!--    </header>-->
+    <div class="top-bar">
+        <button type="" class="header-up-btn adress" style="">ул. Академика Хохлова, 1с40, Москва, 119234</button>
+            <button type="button" class="header-up-btn switch-lang" style="">RU</button>
+    </div>
+   <header class="header">
+        <div class="logo" style="display: flex; ">
+<!--        <img src="../static/img/logo.png" width="173" alt=""/>-->
+            <a href="main"><img src="../static/img/logo_v6.svg" width="175"></a>
+    <div style="margin-left:20px;"><h3 style="font-family:Helvetica;">Кафедра высокомолекулярных<br>соединений</br></h3></div>
+        </div>
+    <nav class="main-navbar">
+        <ul>
+            <li><a class="{% if active_page == 'hist' %}active{% endif %}" href="history">История кафедры</a></li>
+            <li><a class="{% if active_page == 'lab' %}active{% endif %}" href="labs">Лаборатории</a></li>
+            <li><a class="{% if active_page == 'employ' %}active{% endif %}" href="employees">Сотрудники</a></li>
+            <li><a class="{% if active_page == 'stud' %}active{% endif %}" href="study">Учебные материалы</a></li>
+            <li><a class="{% if active_page == 'contact' %}active{% endif %}" href="contacts">Контакты</a></li>
+        </ul>
+    </nav>
+   </header>
+    <main class="container">
+        {% block main %}
+        {% endblock %}
+    </main>
+</div>
+<footer style="background-color: #eef4ff" class="footer py-3 text-center text-body-white">
+    <p>Created by
+        <a href="https://t.me/onllooker">@onl.looker</a>
+        .
+    </p>
+    <p class="mb-0">
+        <a href="./gptStudy.html">Back to top</a>
+    </p>
+</footer>
+<!-- Включение необходимых скриптов для работы Bootstrap -->
+{%block script%}
+{%endblock%}
+<script
+        defer
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+></script>
+<script
+        defer
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+></script>
+<script
+        defer
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+></script>
+<script
+        defer
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+></script>
+
+</body>
+</html>

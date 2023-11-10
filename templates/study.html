@@ -1,0 +1,724 @@
+{%extends 'base.html'%}
+
+{%block style%}
+<link rel="stylesheet" href="{{url_for('static', filename= 'css/study.css')}}"/>
+{%endblock%}
+
+{%block title%}
+Учебные материалы
+{%endblock%}
+
+{%block main%}
+<div class="container p-0">
+    <h3>Учебные материалы кафедры ВМС МГУ им. М.В. Ломоносова</h3>
+    <p>
+        В данном разделе описаны основные вехи истории создания кафедры высокомолекулярных соединений на химическом
+        факультете МГУ и историяя полимерной науки.
+    </p>
+    <hr/>
+    <div class="row mt-4">
+        <nav class="sidebar ps-0 pe-0 col-2 text-white">
+              <div class="sidebard">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#window0"
+                    >Расписание</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#window1"
+                    >Общий курс ВМС</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#window2"
+                    >Практикум</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#window3"
+                    >Спецкурсы</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#window4"
+                    >Методические пособия</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#window5"
+                    >Список литературы</a
+                    >
+                </li>
+            </ul>
+</div>
+        </nav>
+
+        <div class="tab-content col-10 content-rigth">
+            <div id="window0" class="tab-pane fade show active content-window">
+                <h4>Расписание занятий на кафедре ВМС</h4>
+                <p class="border-bottom border-top py-2 px-3 mb-3">
+                   Лекции по дисциплине "Высокомолекулярные соединения" регулярно проводятся в Северной
+                            химической аудитории
+                            (СХА) на химическом факультете. Семинары по данной дисциплине проходят в корпусе А.
+                            Расписание лекций и
+                            семинаров представлены ниже в форме таблицы:
+                </p>
+                <div class="container mt-4 p-0">
+                    <div class="container p-0 mt-4">
+                        <div class="container my-4">
+                            <table class="time-table  mt-3">
+                                <thead>
+                                <tr>
+                                    <th style="border:none"></th>
+                                    <th>Понедельник</th>
+                                    <th>Вторник</th>
+                                    <th>Среда</th>
+                                    <th>Четверг</th>
+                                    <th>Пятница</th>
+                                    <th>Суббота</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="time">9:00 - 10:35 <br> (1 пара)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="tab-lec">Черникова Е.В. лекц</td>
+                                    <td class="aud619">Панова Т.В. <br>(409 группа)</td>
+                                    <td class="aud619">Беканова М.З. <br>(403 группа)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="time">10:50 - 12:25<br> (2 пара)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="aud341">Литманович Е.А.<br>(411 группа)</td>
+                                    <td class="aud619">Спиридонов В.В. <br>(407 группа)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="time">12:40 - 14:15<br> (3 пара)</td>
+                                    <td class="aud501">Трофимчук Е.С. <br>(405 группа)</td>
+                                    <td class="aud501">Большакова А.В. <br>(404 группа)</td>
+                                    <td class="tm">Беркович А.К.<br>Сыбачин А.В.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="aud501">Минеева К.О. <br>(412 группа)</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">15:00 - 16:35<br> (4 пара)</td>
+                                    <td class="aud619">Ефимова А.А. <br>(413 группа)</td>
+                                    <td></td>
+                                    <td class="tab-lec">Лысенко Е.А. лекц</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="time">16:45 - 18:20 <br> (5 пара)</td>
+                                    <td></td>
+                                    <td class="aud501">Чернов И.В. <br>(402 группа)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="svg-container border-bottom">
+                                <div class="svg-p mx-2">
+                                    <svg height="3" width="40">
+                                        <rect width="40" height="3" fill="#0f2e6b"/>
+                                    </svg>
+                                    <p> - 619 ауд.</p>
+                                </div>
+                                <div class="svg-p mx-1">
+                                    <svg height="3" width="40">
+                                        <rect width="40" height="3" fill="#D0BC63"/>
+                                    </svg>
+                                    <p> - 501 ауд.</p>
+                                </div>
+                                <div class="svg-p mx-2">
+                                    <svg height="3" width="40">
+                                        <rect width="40" height="3" fill="#D07C3B"/>
+                                    </svg>
+                                    <p> - 341 ауд.</p>
+                                </div>
+                                <div class="svg-p mx-1">
+                                    <svg height="3" width="40">
+                                        <rect width="40" height="3" fill="#54B1AA"/>
+                                    </svg>
+                                    <p> - СХА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 table-legend">
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="window1" class="tab-pane fade content-window">
+                <h4>Учебные программы и лекции общего курса ВМС:</h4>
+                <p class="border-top border-botoom">
+                    Учебные программы общего курса высокомолекулярных соединений включают в себя основные разделы
+                    полимерной химии: физическая химия полимеров, основы синтеза, физика растворов полимеров, механика
+                    полимеров.
+                </p>
+                <ul>
+                    <li><a href="">Программа общего курса (4 курс)</a></li>
+                    <li><a href="">Программа общего курса (5 курс)</a></li>
+                </ul>
+                 <h4>Материалы общего курса ВМС</h4>
+                <p class="border-bottom border-top py-2 px-3 mb-3">
+                    Лекции общего курса высокомолекулярных соединений охватывают
+                    все основные темы полимерной химии и физики. Данные лекции
+                    предназначены для студентов 4 и 5 курсов химического
+                    факультета, также для студентов ФНМ и ФФФХИ.
+                </p>
+                <div class="accordion" id="courseAccordion">
+                    <!--                        <h5>Лекции для 4 и 5 курсов химического факультета</h5>-->
+                    <div class="accordion-item mt-3" id="headingFour">
+                        <h2 class="accordion-header">
+                            <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseFour"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFour"
+                            >
+                                Лекции общего курса ВМС (4 курс)
+                            </button>
+                        </h2>
+                        <div
+                                id="collapseFour"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingFour"
+                                data-parent="#courseAccordion"
+                        >
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="https://youtu.be/DQsW8QSZ234">Лекция 1</a></li>
+                                    <li><a href="https://youtu.be/F8MW9-Vh4jY">Лекция 2</a></li>
+                                    <li><a href="https://youtu.be/v83rq7SC-OU">Лекция 3</a></li>
+                                    <li><a href="https://youtu.be/KzAB15Cc2xU">Лекция 4</a></li>
+                                    <li><a href="https://youtu.be/2weWWNWykfI">Лекция 5</a></li>
+                                    <li><a href="https://youtu.be/LZ3qJRh_BD0">Лекция 6</a></li>
+                                    <li><a href="https://youtu.be/Oyl7gPTTZEo">Лекция 7</a></li>
+                                    <li><a href="https://youtu.be/ASiI2wMxsFc">Лекция 8</a></li>
+                                    <li><a href="https://youtu.be/4oBTsOLT_Os">Лекция 9</a></li>
+                                    <li><a href="https://youtu.be/6Lt5PGjaLW4">Лекция 10</a></li>
+                                    <li><a href="https://youtu.be/48XvCojmVCM">Лекция 11</a></li>
+                                    <li><a href="https://youtu.be/_u_M_TZFkrc">Лекция 12</a></li>
+                                    <li><a href="https://youtu.be/6jjvIAbyzDs">Лекция 13</a></li>
+                                    <li><a href="https://youtu.be/0P1-9-pW_7g">Лекция 14</a></li>
+                                    <li><a href="https://youtu.be/QKCbEE3YQHM">Лекция 15</a></li>
+                                    <li><a href="https://youtu.be/Tsy6zAvGiSM">Лекция 16</a></li>
+                                    <li><a href="https://youtu.be/HV7GYFweeZw">Лекция 17</a></li>
+                                    <li><a href="https://youtu.be/HX4h12hfRhE">Лекция 18</a></li>
+                                    <li><a href="https://youtu.be/7-2fSmzeBHk">Лекция 19</a></li>
+                                    <li><a href="https://youtu.be/frZctJYUa2w">Лекция 20</a></li>
+                                    <li><a href="https://youtu.be/C2OtcphxcGc">Лекция 21</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" id="headingFive">
+                        <h2 class="accordion-header">
+                            <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseFive"
+                                    aria-expanded="false"
+                                    aria-controls="collapseFive"
+                            >
+                                Лекции общего курса ВМС (5 курс)
+                            </button>
+                        </h2>
+                        <div
+                                id="collapseFive"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="headingFive"
+                                data-parent="#courseAccordion"
+                        >
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="L22O1.pdf" target="_blank">Лекция 9 сентября</a></li>
+                                    <li><a href="L2202.pdf" target="_blank">Лекция 16 сентября</a></li>
+                                    <li><a href="L2203.pdf" target="_blank">Лекция 23 сентября</a></li>
+                                    <li><a href="L2204.pdf" target="_blank">Лекция 30 сентября</a></li>
+                                    <li><a href="L2205.pdf" target="_blank">Лекция 7 октября</a></li>
+                                    <li><a href="L2206.pdf" target="_blank">Лекция 14 октября</a></li>
+                                    <li><a href="L2207.pdf" target="_blank">Лекция 18 ноября</a></li>
+                                    <li><a href="L2208.pdf" target="_blank">Лекция 25 ноября</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="window2" class="tab-pane fade content-window">
+                <h4>Практикум кафедры ВМС</h4>
+                <p class="border-bottom border-top py-2 px-0 mb-3">
+                    Практикум кафедры высокомолекулярных соединений представляет
+                    из себя блок лабораторных работ для общего курса ВМС, которые
+                    затрагивает в себя все основные разделы полимерной химии, а
+                    текже блок лабораторныз работ для студентов,
+                    специализирующихся на химии полимеров - спецпрактикум.
+                </p>
+                <h5 class="fst-italic">
+                    Список методических пособий для спецпрактикума ВМС:
+                </h5>
+                <div class="border-bottom border-top mb-3 py-2 px-0">
+                    <ul>
+                        <li>
+                            <a href="http://vmsmsu.ru/method/11.pdf">
+                                А.В. Большакова, Е.С. Трофимчук «Исследование структуры
+                                полимеров электронно-микроскопическими методами»</a
+                            >
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/method/12.pdf"
+                            >А.В. Большакова, И.В. Яминский «Сканирующая зондовая
+                                микроскопия полимерных материалов. Обработка
+                                изображений»</a
+                            >
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf"
+                            >Спецпрактикум - задачи по растворам полимеров
+                                (методическая разработка Е.А.Литманович)</a
+                            >
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">
+                                А.В. Большакова, Е.С. Трофимчук «Исследование структуры
+                                полимеров электронно-микроскопическими методами»</a
+                            >
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf"
+                            >А.Д. Антипина Методические разработки к практическим
+                                работам по полиэлектролитам</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <h5 class="fst-italic">
+                    Список методических пособий по темам:
+                </h5>
+                <div class="container mt-4 p-0">
+                    <div class="accordion" id="courseAccordion">
+                        <!-- Синтез -->
+
+                        <div class="accordion-item" id="headingFourSynthesis">
+                            <h2 class="accordion-header">
+                                <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseFourSynthesis"
+                                        aria-expanded="true"
+                                        aria-controls="collapseFourSynthesis"
+                                >
+                                    Синтез
+                                </button>
+                            </h2>
+                            <div
+                                    id="collapseFourSynthesis"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourSynthesis"
+                                    data-parent="#courseAccordion"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a href="http://vmsmsu.ru/method/11.pdf"
+                                            >Порядок реакции полимеризации по мономеру</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://vmsmsu.ru/method/12.pdf"
+                                            >Порядок реакции полимеризации по инициатору</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://vmsmsu.ru/Syn13.pdf"
+                                            >Температурные закономерности радикальной
+                                                полимеризации</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Химические превращения -->
+
+                        <div
+                                class="accordion-item"
+                                id="headingFiveChemicalTransformations"
+                        >
+                            <h2 class="accordion-header">
+                                <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseFiveChemicalTransformations"
+                                        aria-expanded="false"
+                                        aria-controls="collapseFiveChemicalTransformations"
+                                >
+                                    Химические превращения
+                                </button>
+                            </h2>
+                            <div
+                                    id="collapseFiveChemicalTransformations"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFiveChemicalTransformations"
+                                    data-parent="#courseAccordion"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a href="http://vmsmsu.ru/ShibaevMod.pdf"
+                                            >Методические разработки к практическим работам
+                                                по химическим превращениям и модификации
+                                                полимеров</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="Задача по деполимеризации."
+                                            >Задача по деполимеризации.</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Растворы -->
+
+                        <div class="accordion-item" id="headingFourPolymers">
+                            <h2 class="accordion-header">
+                                <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseFourPolymers"
+                                        aria-expanded="true"
+                                        aria-controls="collapseFourPolymers"
+                                >
+                                    Растворы полимеров
+                                </button>
+                            </h2>
+                            <div
+                                    id="collapseFourPolymers"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourPolymers"
+                                    data-parent="#courseAccordion"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a href="http://vmsmsu.ru/sol2.pdf"
+                                            >Фазовые диаграммы</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://vmsmsu.ru/sol3.pdf"
+                                            >Определение невозмущенных размеров
+                                                макромолекул</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://vmsmsu.ru/sol4.pdf"
+                                            >Определение параметров уравнения
+                                                Марка-Куна-Хаувинка</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://vmsmsu.ru/sol5.pdf"
+                                            >Оценка полидисперсности</a
+                                            >
+                                        </li>
+                                        <li>
+                                            Светорассеяние:
+                                            <a href="http://vmsmsu.ru/sol1teor.pdf">Теория/</a
+                                            ><a href="http://vmsmsu.ru/sol1prak.pdf"
+                                        >Практика</a
+                                        >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Полиэлектролиты -->
+
+                        <div
+                                class="accordion-item"
+                                id="headingFourPolyelectrolytes"
+                        >
+                            <h2 class="accordion-header">
+                                <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseFourPolyelectrolytes"
+                                        aria-expanded="true"
+                                        aria-controls="collapseFourPolyelectrolytes"
+                                >
+                                    Полиэлектролиты
+                                </button>
+                            </h2>
+                            <div
+                                    id="collapseFourPolyelectrolytes"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourPolyelectrolytes"
+                                    data-parent="#courseAccordion"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><a href="#">Изоионное разбавление</a></li>
+                                        <li>
+                                            <a href="#"
+                                            >Кооперативные реакции полиэлектролитов</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Определение изменения энергии Гиббса при
+                                                конформационном переходе ПМАК</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                            >Определение константы диссоциации полимерной
+                                                кислоты</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Механика -->
+
+                        <div class="accordion-item" id="headingFourMechanics">
+                            <h2 class="accordion-header">
+                                <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseFourMechanics"
+                                        aria-expanded="true"
+                                        aria-controls="collapseFourMechanics"
+                                >
+                                    Механика
+                                </button>
+                            </h2>
+                            <div
+                                    id="collapseFourMechanics"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourMechanics"
+                                    data-parent="#courseAccordion"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a href="#"
+                                            >Гистерезис при деформации полимеров</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                            >Механические свойства стеклообразных
+                                                полимеров</a
+                                            >
+                                        </li>
+                                        <li><a href="#">Релаксация и напряжения</a></li>
+                                        <li>
+                                            <a href="#">Динамометрия (аморфный полимер)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                            >Динамометрия (кристаллический полимер)</a
+                                            >
+                                        </li>
+                                        <li><a href="#">Термомеханический анализ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Структура -->
+
+                        <div class="accordion-item" id="headingFourStructure">
+                            <h2 class="accordion-header">
+                                <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseFourStructure"
+                                        aria-expanded="true"
+                                        aria-controls="collapseFourStructure"
+                                >
+                                    Структура полимеров
+                                </button>
+                            </h2>
+                            <div
+                                    id="collapseFourStructure"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFourStructure"
+                                    data-parent="#courseAccordion"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><a href="#">Кинетика кристаллизации</a></li>
+                                        <li><a href="#">Сферолиты</a></li>
+                                        <li><a href="#">Рентгенография полимеров</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="window3" class="tab-pane fade content-window">
+                <h4>Спецкурсы</h4>
+<!--                <p class="border-bottom border-top py-2 px-0 mb-3">В данном разделе представлены материалы спецкурсов-->
+<!--                    кафедры ВМС. </p>-->
+<hr/>
+                <div class="container mt-4 p-0">
+                    <ul>
+                        <li>
+                            <a href="http://vmsmsu.ru/method/11.pdf">
+                                Введение в специализацию «Высокомолекулярные соединения»</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/method/12.pdf"
+                            > Теоретические основы экспериментальных методов в науке о полимерах</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">Численные методы в химии полимеров</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">Кинетика и механизм образования макромолекул</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">Структура и механические своства полимеров</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">Растворы полимеров</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">Основы технологии получения и переработки полимеров</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">Химические превращения полимеров</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">Полиэлектролиты</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">(Современные проблемы химии) Самоорганизация в
+                                полимерных
+                                системах и дизайн функциональных материалов</a>
+                        </li>
+                        <li>
+                            <a href="http://vmsmsu.ru/Syn13.pdf">(Современные проблемы химии) Дополнительные главы науки
+                                о
+                                полимерах: технология мономеров и макромолекулярный дизайн</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="window4" class="tab-pane fade content-window">
+                <h4>Методические пособия</h4>
+<!--                <p class="border-bottom border-top py-2 px-0 mb-3">-->
+<!--                    В данном разделе представлены методические пособия кафедры ВМС-->
+<!--                </p>-->
+                <hr/>
+                <div class="container mt-4 p-0">
+                    <ul>
+                        <li><a href="#">Общие представления о высокомолекулярных соединениях</a></li>
+                        <li><a href="#">Синтез высокомолекулярных соединений (часть 1, часть 2)</a></li>
+                        <li><a href="#">Растворы полимеров (часть 1, часть 2)</a></li>
+                        <li><a href="#">Полиэлектролиты (общий курс)</a></li>
+                        <li><a href="#">Пособие по высокомолекулярным соединениям для филиала МГУ в Баку (темы
+                            Химические свойства, Механика и Структура)</a></li>
+                        <li><a href="#">М.С.Аржаков, А.Е.Жирнов, Г.М.Луковкин "Основы унифицированной механики
+                            пластиков", М:Химический факультет, 2016</a></li>
+                        <li><a href="#">Структура полимеров</a></li>
+                        <li><a href="#">M.S. Arzhakov "Structural Physicomechanics of Polymers. Selected Chapters" для
+                            курса "Selected chapters in chemistry" - 5 курс Химического факультета</a></li>
+                        <li><a href="#">M.S. Arzhakov "Structural Engineering of Polymeric Materials. Introductory
+                            Remarks" для курса "Selected chapters in chemistry" - 5 курс Химического факультета</a></li>
+                        <li><a href="#">Литманович Е.А. Лекции по спецкурсу "Растворы полимеров" М: Химический
+                            факультет, 2020</a></li>
+                        <li><a href="#">Пышкина О.А., Новоскольцева О.А., Ярославов А.А. Полиэлектролиты, 2022 (пособие
+                            для спецкурса)</a></li>
+                        <li><a href="#">Заремский М.Ю. «Кинетика и механизм образования макромолекул.» 2022 г. Часть 1 и
+                            Часть 2</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div id="window5" class="tab-pane fade content-window">
+                <h4>Список литературы</h4>
+                <div class="border-bottom border-top mb-3 py-2 px-0">
+                    <ul>
+                        <li>
+                            <a href=""
+                            >Высокомолекулярные соединения, под ред. А.Б.Зезина,
+                                М.:Юрайт, 2016, 340 с. (список опечаток)</a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                            >Практикум по ВМС, под ред. В.А.Кабанова, 1985г.</a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                            >Аржаков М.С. Высокомолекулярные соединения. Словарь
+                                терминов, понятий и определений, Montreal: Accent
+                                Graphics Communications (электронное издание), 2016, 174
+                                с.</a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                            >Волынский А.Л. Избранные очерки по физике полимеров
+                                М.:2019</a
+                            >
+                        </li>
+                        <li>
+                            <a href=""
+                            >Киреев В.В. Высокомолекулярные соединения, М.:2013, 602
+                                с.
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""
+                            >Ю.Д.Семчиков, Высокомолекулярные соединения, М.,2005г.
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""
+                            >В.Н.Кулезнев, В.А.Шершнев, Химия и физика полимеров,
+                                2007г.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

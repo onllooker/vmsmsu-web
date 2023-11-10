@@ -1,0 +1,136 @@
+.lab-discription {
+  margin-bottom: 2rem;
+}
+
+/* Стили для сотрудников */
+.employee-card {
+  border: 1px solid #ddd;
+  border: 1px solid #0b0b50ba;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+.employee-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.employee-card h5 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.employee-card p {
+  font-size: 14px;
+}
+
+/* Стили для иконок */
+.icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* Стили для модального окна */
+.modal-body p {
+  font-size: 14px;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 2px
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.modal-content h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.modal-content ul li {
+  margin-bottom: 5px;
+}
+.card-p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-btn{
+    color: white;
+    border-radius: 0;
+    background-color: #316599e6;
+
+}
+
+.card-btn:hover{
+    border: 1px solid #336699e3;
+    color: white;
+    background-color: #23598f;
+}
+
+.true-btn{
+    border: 1px solid #23598f;
+    border-radius: 0;
+    color: #23598f;
+}
+
+.true-btn:hover{
+    border: 1px solid #23598f;
+    border-radius: 0;
+    background-color: #23598f;
+    color: white;
+}
+
+@media screen and (max-width: 1404px) {
+  .true-btn::after {
+    content: url('/static/img/globe.svg'); /* Используйте правильный URL для вашего сервера */
+    display: inline-block;
+    width: 21px; /* Задайте размеры SVG по вашему усмотрению */
+    height: 21px;
+    vertical-align: middle;
+  }
+}
+
+/* Стили для большого экрана */
+@media screen and (min-width: 1405px) {
+  .true-btn::after {
+    content: "ИСТИНА";
+    vertical-align: middle;
+  }
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 0;
+}
+
+
+.employees{
+    padding: 16px;
+    background-color: #c2bee036;
+}
+
+.section-employee{
+margin-top:1.5rem;
+margin-bottom:0.5rem;
+}
+
+.employees .section-employee:first-child {
+    margin-top:0rem;
+}
+

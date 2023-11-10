@@ -1,0 +1,166 @@
+{%extends 'base.html'%}
+
+{%block style%}
+<link rel="stylesheet" href="{{url_for('static', filename= 'css/sotr.css')}}" xmlns="http://www.w3.org/1999/html"/>
+{%endblock%}
+
+{%block title%}
+Сотрудники
+{%endblock%}
+
+{%block main%}
+<div class="container p-0">
+    <h3>Сотрудники кафедры ВМС МГУ им. М.В. Ломоносова</h3>
+    <p class="mb-4">
+        В данном разделе представлена информация о сотрудниках кафедры
+        высокомолекулярных оединений. Раздел содержит краткое описание
+        научных интересов каждого сотрудника, контактные данные и т.д.
+    </p>
+    <div class="employees">
+        {% for section, employees_list in data.items() %}
+        <div class="section-employee">
+            <div class="d-flex align-items-center">
+                <hr class="flex-grow-1"/>
+                <h5 class="mx-2">{{ section }}</h5>
+                <hr class="flex-grow-1"/>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for employee in employees_list %}
+            <div class="col-lg-4 col-md-6">
+                <div class="employee-card">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img
+                                    src="../static/img/{{ employee['img']}}"
+                                    alt="Employee 1"
+                            />
+                        </div>
+                        <div class="col-md-8">
+                            <h5>{{ employee['name']}}</h5>
+                            <p class="card-p">Должность: {{ employee['dolzh']}}</p>
+                            <p class="card-p">Ученая степень: {{ employee['sci_step']}}</p>
+                            <p class="card-p">Ученое звание: {{ employee['sci_zvan']}}</p>
+                            <p class="card-p">Тел.: {{ employee['phone']}}</p>
+                            <p>E-mail: {{ employee['email']}}</p>
+                            <button
+                                    type="button"
+                                    class="btn card-btn btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#employeeModal"
+                                    data-employee-id={{employee['employee_id']}}
+                            >
+                                Подробнее
+                            </button>
+
+
+                            <button
+                                    type="button"
+                                    class="btn true-btn btn-sm"
+                                    data-bs-redirect="istina"
+                                    id={{employee['employee_id']}}
+                            ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div
+        class="modal fade"
+        id="employeeModal"
+        tabindex="-1"
+        aria-labelledby="employeeModalLabel"
+        aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content" , id="modalEmployeeData">
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}
+
+{%block script%}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Добавление обработчика событий для всех кнопок с классами "btn", "true-btn" и "btn-sm"
+    var buttons = document.querySelectorAll('.btn.true-btn.btn-sm');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', ()=> {
+             var url = "https://istina.msu.ru/profile/";
+            window.open(url+button.id+"/", "_blank");
+        });
+    });
+});
+</script>
+
+<script>
+    const modalEmployeeData = document.getElementById('modalEmployeeData');
+
+    document.querySelectorAll('[data-bs-toggle="modal"]').forEach(button => {
+        button.addEventListener('click', function () {
+            const employeeId = this.getAttribute('data-employee-id');
+            fetch(`/get_employee_data/${employeeId}`)
+                .then(response => response.json())
+                .then(data => {
+                    modalEmployeeData.innerHTML = `
+                    <div class="modal-header">
+                <h4 class="modal-title" id="employeeModalLabel">${data.name}</h4>
+                <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img
+                                    src="${data.photoUrl}"
+                                    class="img-fluid rounded"
+                                    alt="Employee Photo"
+                                />
+                            </div>
+                            <div class="col-md-8">
+                                <h5>${data.achievements}</h5>
+                                <h5>Научные интересы:</h5>
+                                <p>${data.interests}</p>
+                            </div>
+                        </div>
+                        <h4 class="mt-3">Статьи:</h4>
+                        <ul class="list-group", style="padding:0;">
+                            ${data.articles.map(article => `<li class="list-group-item">${article}</li>`).join('')}
+                        </ul>`;
+                    $('#employeeModal').modal('show');
+                });
+        });
+    });
+
+
+
+
+
+
+
+
+</script>
+<script>
+var a =document.getElementById(${data.employee_id})
+a.addEventListener("click", ()=> {
+    alert(1)
+    var buttonId = this.id;
+
+    window.open("https://istina.msu.ru/profile/"+buttonId+"/", "_blank");
+});
+
+
+
+</script>
+{%endblock%}

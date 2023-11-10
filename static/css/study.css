@@ -1,0 +1,138 @@
+/* body {
+  /* padding: 0 calc(20px - (100vw - 100%)) 0 0; */
+/* } */
+/* Дополнительные стили для контентных окон */
+.content-window {
+  min-height: 300px; /* Добавим минимальную высоту для примера */
+}
+
+.tab-content {
+  overflow-y: auto;
+}
+
+.sidebar {
+  font-size: 20px;
+  fon
+}
+
+.sidebar .nav-link {
+  border-radius: 0px !important;
+  color: #153471;
+  border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover {
+  border-radius: 0px !important;
+  border-left: 3px solid #7994c8;
+  background-color: #7994c814;
+  /*color: #7994c8;*/
+}
+.sidebar .nav-link.active {
+  border-radius: 0px !important;
+  border-left: 3px solid #0f2e6b;
+  background-color: #7994c829;
+  color: #0f2e6b;
+}
+
+.content-rigth {
+  /* background-color: #f2f2f2; */
+  padding-right: 8px;
+  /* border-left: 1px solid #0f2e6b; */
+}
+
+.content-rigth .tab-pane {
+  padding: 16px;
+    background-color: #c2bee036;
+}
+
+.time-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.time-table td:empty, .time-table th:empty {
+    /*background-color: #f7f6f6b8;*/
+    background-color: transparent;
+}
+
+.time-table th, .time-table td {
+    font-weight: ;
+    border: 1px solid #c7c7c7;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.time-table th {
+    background-color: #0a523e;
+    color: white;
+    font-weight: 400;
+}
+
+
+
+td:hover{
+    background-color: #0f2e6b0a;
+    transition: 0.3s;
+}
+.tab-lec {
+    border-bottom: 3px solid #54B1AA !important;
+}
+
+.aud501 {
+    border-bottom: 3px solid #D0BC63 !important;
+}
+
+.aud619 {
+    border-bottom: 3px solid #0f2e6b !important;
+}
+
+  .aud341 {
+border-bottom: 3px solid #D07C3B !important;
+
+  }
+
+.time {
+    font-weight: 600;
+    border: none !important;
+    background-color: #0a523e0f;
+}
+
+.tm {
+    font-size: 12px;
+}
+
+tr{
+    border-left: 3px solid transparent;
+}
+
+tbody tr:hover {
+    border-left: 3px solid #0f2e6b;
+    background-color: #f1f1f1;
+}
+
+  .svg-container {
+    display: flex;
+    align-items: center;
+    margin-top: 9px;
+    justify-content: flex-end;
+  font-size: smaller;
+  }
+.svg-p{
+display:flex;
+flex-direction:row;
+}
+  svg {
+    margin-right: 5px;
+    margin-top:12px;
+  }
+
+.sidebard{
+background-color:#7462b757;
+}
+
+.nav-link{
+border-bottom:1px solid #7462b757;
+background-color:#e9eef6;
+}

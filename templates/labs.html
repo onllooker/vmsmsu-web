@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+
+{%block style%}
+<link rel="stylesheet" href="{{url_for('static', filename= 'css/labs.css')}}"/>
+{%endblock%}
+
+{%block title%}
+Лаборатории
+{%endblock%}
+
+{%block main%}
+<h3>Лаборатории кафедры ВМС</h3>
+<p>
+    Структура кафедры была сформирована академиком В.А.Каргиным в 1965 г. и с тех пор не претерпела существенных
+    изменений. В состав кафедры входят 5 научно-исследовательских лабораторий и студенческий практикум. Общий штат
+    сотрудников с учетом научно-вспомогательного персонала - 88 человек. В их числе 4 профессора, 7 доцентов, 1 старший
+    преподаватель, 1 ассистент, 69 научных сотрудников различных рангов. Среди них 15 докторов наук и 43 кандидата наук.
+
+
+</p>
+<hr/>
+<div class="container cards">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for card in card_data %}
+        <div class="col">
+            <div class="lab_card card" , style="height:100%;">
+                <div style="height:15px;background-color:#34495e;"></div>
+                <div class="content">
+                    <div class="lab_name card-body border-bottom">
+                        <h5 class="">{{ card.title }}</h5>
+                        <p class="card-text"></p>
+                    </div>
+                    <div class="lab_topics">
+                        <ul>
+                            {% for topic in card.topics %}
+                            <li class="mt-2">{{ topic }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <!--                <div class="card-body border-bottom">-->
+                <!--                    <h5 class="">{{ card.title }}</h5>-->
+                <!--                    <p class="card-text"></p>-->
+                <!--                </div>-->
+                <!--                <ul>-->
+                <!--                    {% for topic in card.topics %}-->
+                <!--                    <li class="mt-2">{{ topic }}</li>-->
+                <!--                    {% endfor %}-->
+                <!--                </ul>-->
+                <!--                <div>-->
+                <!--                    <a href="#" class="btn btn-primary btn-sm"-->
+                <!--                       style="border-radius: 0;border:none; width:100%; background-color:{{card.color}};">Подробнее</a>-->
+                <!--                </div>-->
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock%}

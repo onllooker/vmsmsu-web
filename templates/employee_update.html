@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Заполнение базы данных</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="mb-4">Форма заполнения базы данных</h1>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="fio">ФИО:</label>
+                <input type="text" class="form-control" name="fio" required>
+            </div>
+            <div class="form-group">
+                <label for="position">Должность:</label>
+                <input type="text" class="form-control" name="position" required>
+            </div>
+            <div class="form-group">
+                <label for="degree">Ученая степень:</label>
+                <input type="text" class="form-control" name="degree" required>
+            </div>
+            <div class="form-group">
+                <label for="title">Ученое звание:</label>
+                <input type="text" class="form-control" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="text" class="form-control" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="workplace">Место работы:</label>
+              <select class="form-control" name="workplace" required>
+                    <option value="Администрация">Администрация</option>
+                    <option value="Лаборатория_полимеризационных_процессов">Лаборатория полимеризационных процессов</option>
+                    <option value="Лаборатория_полиэлектролитов_и_биополимеров">Лаборатория полиэлектролитов и биополимеров</option>
+                    <option value="Лаборатория_химических_превращений_полимеров">Лаборатория химических превращений полимеров</option>
+                    <option value="Лаборатория_функциональных_полимеров_и_полимерных_материалов">Лаборатория функциональных полимеров и полимерных материалов</option>
+                    <option value="Лаборатория_структуры_полимеров">Лаборатория структуры полимеров</option>
+                    <option value="Лаборатория_нанобиоструктур">Лаборатория нанобиоструктур</option>
+                    <option value="Лаборатория_функциональных_органических_и_гибридных_полимерных_систем">Лаборатория функциональных органических и гибридных полимерных систем</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Добавить в базу данных</button>
+        </form>
+    </div>
+
+    <!-- Подключение Bootstrap JS и зависимостей (jQuery, Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
